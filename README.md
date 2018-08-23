@@ -3,7 +3,7 @@
 ## Installation
 
 ```ruby
-gem 'ignored_removed_columns'
+gem 'ignored_removed_columns', group: [:development, :test]
 ```
 
 ## Usage
