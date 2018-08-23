@@ -1,38 +1,29 @@
 # IgnoredRemovedColumns
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ignored_removed_columns`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
-
-Add this line to your application's Gemfile:
 
 ```ruby
 gem 'ignored_removed_columns'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install ignored_removed_columns
-
 ## Usage
 
-TODO: Write usage instructions here
+```console
+$ rake ignored_removed_columns:check
+Found removed or typo columns defined in ignored_columns
+--------------------------------------------------------
+Post:
+  - published
+  - archived
+```
 
-## Development
+This means:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+`Post` class defines `published` (maybe removed) and `archivedd` (maybe typo) ignored_columns, but the related table (commonly `posts`) does not have those columns. So, you can remove those from its ignored_columns.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ignored_removed_columns.
+Bug reports and pull requests are welcome on GitHub at https://github.com/meganemura/ignored_removed_columns.
 
 ## License
 
