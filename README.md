@@ -14,7 +14,7 @@ Found removed or typo columns defined in ignored_columns
 --------------------------------------------------------
 Post:
   - published
-  - archived
+  - archivedd
 $ echo $?
 1
 ```
